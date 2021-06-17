@@ -5,6 +5,8 @@ on:
   pull_request:
   schedule:
     - cron:  '* * * * *'
+  release:
+    types: [created, published]
 
 jobs:
   foobar:
