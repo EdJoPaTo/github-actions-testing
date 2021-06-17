@@ -14,26 +14,26 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Context github
-        run: |
-          echo "${{ toJSON(github) }}"
+        continue-on-error: true
+        run: ${{ toJSON(github) }}
       - name: Context env
-        run: |
-          echo "${{ toJSON(env) }}"
+        continue-on-error: true
+        run: ${{ toJSON(env) }}
       - name: Context job
-        run: |
-          echo "${{ toJSON(job) }}"
+        continue-on-error: true
+        run: ${{ toJSON(job) }}
       - name: Context steps
-        run: |
-          echo "${{ toJSON(steps) }}"
+        continue-on-error: true
+        run: ${{ toJSON(steps) }}
       - name: Context runner
-        run: |
-          echo "${{ toJSON(runner) }}"
+        continue-on-error: true
+        run: ${{ toJSON(runner) }}
       - name: Context strategy
-        run: |
-          echo "${{ toJSON(strategy) }}"
+        continue-on-error: true
+        run: ${{ toJSON(strategy) }}
       - name: Context matrix
-        run: |
-          echo "${{ toJSON(matrix) }}"
+        continue-on-error: true
+        run: ${{ toJSON(matrix) }}
       - name: Context needs
-        run: |
-          echo "${{ toJSON(needs) }}"
+        continue-on-error: true
+        run: ${{ toJSON(needs) }}
