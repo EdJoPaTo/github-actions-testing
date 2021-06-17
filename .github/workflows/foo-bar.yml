@@ -15,25 +15,25 @@ jobs:
 
       - name: Context github
         run: |
-          echo ${{ github }}
+          echo ${{ toJSON(github) }}
       - name: Context env
         run: |
-          echo ${{ env }}
+          echo ${{ toJSON(env) }}
       - name: Context job
         run: |
-          echo ${{ job }}
+          echo ${{ toJSON(job) }}
       - name: Context steps
         run: |
-          echo ${{ steps }}
+          echo ${{ toJSON(steps) }}
       - name: Context runner
         run: |
-          echo ${{ runner }}
+          echo ${{ toJSON(runner) }}
       - name: Context strategy
         run: |
-          echo ${{ strategy }}
+          echo ${{ toJSON(strategy) }}
       - name: Context matrix
         run: |
-          echo ${{ matrix }}
+          echo ${{ toJSON(matrix) }}
       - name: Context needs
         run: |
-          echo ${{ needs }}
+          echo ${{ toJSON(needs) }}
