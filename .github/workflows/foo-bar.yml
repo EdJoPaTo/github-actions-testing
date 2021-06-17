@@ -1,0 +1,39 @@
+name: Foo bar
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron:  '* * * * *'
+
+jobs:
+  foobar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Context github
+        run: |
+          echo ${{ github }}
+      - name: Context env
+        run: |
+          echo ${{ env }}
+      - name: Context job
+        run: |
+          echo ${{ job }}
+      - name: Context steps
+        run: |
+          echo ${{ steps }}
+      - name: Context runner
+        run: |
+          echo ${{ runner }}
+      - name: Context strategy
+        run: |
+          echo ${{ strategy }}
+      - name: Context matrix
+        run: |
+          echo ${{ matrix }}
+      - name: Context needs
+        run: |
+          echo ${{ needs }}
