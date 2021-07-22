@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron:  '7 17 * * *' # 17:07 UTC
+    - cron:  '7 17 * * 3' # 17:07 UTC on Wednesday
   release:
     types: [published]
 
