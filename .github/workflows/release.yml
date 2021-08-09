@@ -14,13 +14,13 @@ jobs:
           tar --gzip -cvf bla.tar.gz
           README.md
 
-      - run: ls -alR
+      - run: ls -al
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: bla
-          path: >
+          path: |
             *.zip
             *.tar.gz
 
