@@ -7,6 +7,7 @@ on:
     - cron:  '7 17 * * 3' # 17:07 UTC on Wednesday
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   foobar:
