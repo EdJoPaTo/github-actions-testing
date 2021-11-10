@@ -37,8 +37,15 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}},enable=${{ !startsWith(github.ref, 'refs/tags/v0.') }}
 
-      - name: Context github
+      - name: installed
         continue-on-error: true
+        run: |
+          ls -al /usr/bin
+          fd --help || true
+          find --help || true
+
+      - name: Context github
+        continue-on-error: true 
         run: ${{ toJSON(github) }}
       - name: Context env
         continue-on-error: true
